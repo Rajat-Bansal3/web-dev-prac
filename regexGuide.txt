@@ -1,0 +1,63 @@
+Literal Characters:
+
+Literal characters match themselves. For example, the regex abc will match the sequence of characters "abc" in a string.
+
+
+
+Metacharacters:
+
+Metacharacters have special meanings and are the building blocks of regular expressions. Common metacharacters include ^, $, ., *, +, ?, |, (), [], and {}.
+
+
+
+Character Classes ([]):
+
+Character classes allow you to match any one of a set of characters. For example, [aeiou] will match any vowel.
+
+
+
+Negation (^ inside []):
+
+When ^ appears as the first character inside square brackets, it negates the character class. For example, [^0-9] matches any character that is not a digit.
+
+
+
+Quantifiers:
+
+Quantifiers specify the number of occurrences of a character or group. Common quantifiers include * (zero or more), + (one or more), ? (zero or one), and {} (exact range).
+
+
+
+Anchors (^ and $):
+
+^ asserts the start of a line, and $ asserts the end of a line. For example, ^abc matches "abc" only at the beginning of a line.
+
+
+
+Wildcard (.):
+
+The dot . matches any character except for a newline. For example, a.c matches "abc," "axc," "a1c," etc.
+
+
+
+Grouping (()):
+
+Parentheses are used for grouping and capturing subexpressions. For example, (ab)+ matches one or more occurrences of "ab."
+
+
+
+Alternation (|):
+
+The pipe | is used for alternation, allowing you to match either the pattern on the left or the pattern on the right. For example, cat|dog matches either "cat" or "dog."
+
+
+
+Escape Character (`):
+
+The backslash \ is used to escape a metacharacter, allowing you to match it as a literal character. For example, \. matches a literal dot.
+
+
+
+Modifiers (Flags):
+
+Modifiers or flags, such as i for case-insensitivity or g for global matching, can be added to the end of a regex. For example, /pattern/i.
