@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function sum() {
+        const fnum = document.getElementById("fnum").value;
+        const snum = document.getElementById("snum").value;
+        const el = document.getElementById("hi");
+        fetch(
+          "http://localhost:3000/sum/?num1=" + fnum + "&num2=" + snum
+        ).then((sum)=>{
+          console.log(sum)
+          sum.text().then((text)=>{
+            console.log(text)
+            document.getElementById("hi").innerHTML = text
+          })
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input id="fnum" type="text" placeholder="First Number" />
+    </div>
+    <div class="">
+      <input id="snum" type="text" placeholder="Second Number" />
+    </div>
+    <div class="">
+      <button onclick="sum()">Calculate</button>
+    </div>
+    <div id="hi"></div>
+  </body>
+</html>

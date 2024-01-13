@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function sum() {
+        const fnum = document.getElementById("fnum").value;
+        const snum = document.getElementById("snum").value;
+        const tnum = document.getElementById("tnum").value;
+        fetch(
+          "http://localhost:3000/principal-interest/?principal=" + fnum + "&rate=" + snum+ "&time=" + tnum
+        ).then((sum)=>{
+          console.log(sum)
+          sum.text().then((text)=>{
+            console.log(text)
+            document.getElementById("hi").innerHTML = text
+          })
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input id="fnum" type="text" placeholder="principle" />
+    </div>
+    <div class="">
+      <input id="snum" type="text" placeholder="rate" />
+    </div>
+    <div class="">
+      <input id="tnum" type="text" placeholder="time" />
+    </div>
+    <div class="">
+      <button onclick="sum()">Calculate</button>
+    </div>
+    <div id="hi"></div>
+  </body>
+</html>
