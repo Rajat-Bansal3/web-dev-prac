@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>todo</title>
+    <script>
+        async function todo(){
+            const title = document.getElementById("title").value
+            const description = document.getElementById("description").value
+            const res = await fetch ("http://localhost:3000/api/todo")
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="title" placeholder="title" />
+        <input type="text" id="description" placeholder="description" />
+        <button onclick=todo()>Add todo</button>
+    </div>
+</body>
+</html>
